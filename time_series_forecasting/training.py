@@ -138,13 +138,13 @@ def train(
     train_loader = DataLoader(
         train_data,
         batch_size=batch_size,
-        num_workers=10,
+        num_workers=2,
         shuffle=True,
     )
     val_loader = DataLoader(
         val_data,
         batch_size=batch_size,
-        num_workers=10,
+        num_workers=2,
         shuffle=False,
     )
 
@@ -168,7 +168,8 @@ def train(
 
     trainer = pl.Trainer(
         max_epochs=epochs,
-        gpus=1,
+        accelerator='gpu',
+        devices=1,
         logger=logger,
         callbacks=[checkpoint_callback],
     )
