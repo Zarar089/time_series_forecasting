@@ -9,7 +9,7 @@ from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
 from torch.utils.data import DataLoader
 
-from time_series_forecasting.model import TimeSeriesForcasting
+from model import TimeSeriesForcasting
 
 
 def split_df(
