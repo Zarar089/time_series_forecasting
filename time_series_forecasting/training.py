@@ -99,7 +99,7 @@ def train(
     log_dir: str = "ts_logs",
     model_dir: str = "ts_models",
     batch_size: int = 32,
-    epochs: int = 2000,
+    epochs: int = 10,
     horizon_size: int = 30,
 ):
     data = pd.read_csv(data_csv_path)
