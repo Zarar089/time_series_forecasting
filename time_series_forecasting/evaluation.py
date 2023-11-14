@@ -6,8 +6,8 @@ import torch
 from sklearn.metrics import mean_absolute_error
 from tqdm import tqdm
 
-from time_series_forecasting.model import TimeSeriesForcasting
-from time_series_forecasting.training import split_df, Dataset
+from model import TimeSeriesForcasting
+from training import split_df, Dataset
 
 
 def smape(true, pred):
