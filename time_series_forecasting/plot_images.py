@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
 
-    with open("data/visualization.json", "r") as f:
+    with open("/kaggle/working/time_series_forecasting/data/visualization.json", "r") as f:
         data = json.load(f)
 
-    os.makedirs("data/images", exist_ok=True)
+    os.makedirs("/kaggle/working/time_series_forecasting/data/images", exist_ok=True)
 
     for i, sample in enumerate(data):
         hist_size = len(sample["history"])
