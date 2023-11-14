@@ -29,5 +29,5 @@ if __name__ == "__main__":
 
         plt.legend()
 
-        plt.savefig(f"data/images/{i}.png")
+        plt.savefig(f"/kaggle/working/time_series_forecasting/data/images/{i}.png")
         plt.close()
