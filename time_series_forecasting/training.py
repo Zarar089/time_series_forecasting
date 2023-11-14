@@ -175,7 +175,7 @@ def train(
     )
     trainer.fit(model, train_loader, val_loader)
 
-    result_val = trainer.test(test_dataloaders=val_loader)
+    result_val = trainer.test(test_dataloader=val_loader)
 
     output_json = {
         "val_loss": result_val[0]["test_loss"],
@@ -198,7 +198,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_json_path", default=None)
     parser.add_argument("--log_dir")
     parser.add_argument("--model_dir")
-    parser.add_argument("--epochs", type=int, default=2000)
+    parser.add_argument("--epochs", type=int, default=10)
     args = parser.parse_args()
 
     train(
